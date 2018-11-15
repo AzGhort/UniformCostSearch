@@ -13,7 +13,8 @@ public class Node<S> implements Comparable<Node<S>>
 	@Override
 	public int compareTo(Node<S> o)
 	{
-		if (pathCost > pathCost) return 1;
+		// the lower the path cost, the better!
+		if (pathCost < pathCost) return 1;
 		else if (pathCost == o.pathCost) return 0;
 		else return -1;
 	}
